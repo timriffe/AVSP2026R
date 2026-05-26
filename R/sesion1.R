@@ -31,7 +31,8 @@ library(janitor)
 # pero esta pre-limpiado para empezar.
 # Cada fila contiene población para:
 #   municipio x sexo/género x grupo de edad
-
+# en otro momento os puedo explicar como se ha limpiado 
+# el fichero original
 
 poblacion <- read_csv("data/clean/pobmun.csv")
 # (explica asignacion, referencias)
