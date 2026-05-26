@@ -16,7 +16,8 @@
 # -----------------------------------------------------------------------------
 
 # Si todavía no tienes estos paquetes instalados, descomenta y ejecuta:
-# install.packages(c("tidyverse", "janitor"))
+# install.packages("tidyverse")
+# install.packages("janitor")
 
 library(tidyverse)
 library(janitor)
@@ -35,7 +36,7 @@ library(janitor)
 # el fichero original
 
 poblacion <- read_csv("data/clean/pobmun.csv")
-
+# poblacion # puedes ver los datos solo escribiendo el nombre y ejecutando
 # -----------------------------------------------------------------------------
 # 2. Mirar los datos
 # -----------------------------------------------------------------------------
@@ -55,7 +56,8 @@ names(poblacion)
 
 # ¿Cuántas filas y columnas tiene la tabla?
 dim(poblacion)
-
+# nrow(poblacion)
+# ncol()
 # EJERCICIO 1 ---------------------------------------------------------------
 # Antes de seguir, responde mirando el resultado de glimpse():
 # 1. ¿Cuál es la unidad de observación de esta tabla?
@@ -72,8 +74,11 @@ dim(poblacion)
 #   genero == "Total"
 #   edad_etiqueta == "Total"
 
-pob_total_mun <- poblacion |>
-  filter(genero == "Total", edad_etiqueta == "Total")
+pob_total_mun <- poblacion |> # Ctrl + Shift + M
+  filter(genero == "Total" & edad_etiqueta == "Total")
+# poblacion$genero == "Total" & 
+  # poblacion$edad_etiqueta == "Total"
+# View(pob_total_mun)
 
 pob_total_mun |>
   head()
@@ -84,9 +89,23 @@ pob_total_mun |>
 #   edad_etiqueta == "Total"
 
 
+pob_mujeres_total <- poblacion |>
+  filter(genero == "Mujeres", edad_etiqueta == "Total")
+
 # EJERCICIO 3 ---------------------------------------------------------------
 # Crea una tabla con la población total de los municipios de Bizkaia.
+glimpse(poblacion)
 
+biz_tot <-
+  poblacion |> 
+  filter(prov_cod == "48",
+         edad_etiqueta == "Total",
+         genero == "Total") 
+
+# para ver los valores unicos en una columna:
+poblacion |> 
+  pull(prov_cod) |> 
+  unique()
 # -----------------------------------------------------------------------------
 # 4. Seleccionar columnas con select()
 # -----------------------------------------------------------------------------
@@ -94,8 +113,9 @@ pob_total_mun |>
 # A veces queremos una tabla más pequeña, solo con las columnas que necesitamos.
 
 pob_total_mun_simple <- pob_total_mun |>
-  select(prov, comarca, municipio, pob)
-
+  select(provincia = prov, comarca, municipio, poblacion = pob)
+# el orden de las columnas en select() sera el orden de
+# la tabla resultante
 pob_total_mun_simple |>
   head()
 
@@ -103,9 +123,21 @@ pob_total_mun_simple |>
 # A partir de pob_total_mun, crea una tabla con solo estas columnas:
 #   municipio, comarca, prov, pob
 #
+pob_mun_simple2 <-
+  pob_total_mun |> 
+  select(mun = municipio, com = comarca, prov, pob)
+
 # ¿Qué cambia si pones las columnas en otro orden dentro de select()?
 
+# explicitamente tb estamos reordenando las columnas
+# con select()
+
 # ¿Hay problema si seleccionamos solo comarca, prov, y pob?
+# si quitamos la identificacion de municipios,
+# todavia tendremos una fila por municipio...
+# pero sin saber (1) que son municipios, y (2) 
+# cual es cual incluso si lo sabes. Por tanto, los
+# datos ya NO SON TIDY.
 
 # -----------------------------------------------------------------------------
 # 5. Ordenar filas con arrange()
@@ -134,6 +166,11 @@ pob_total_mun |>
 # - usa arrange(desc(pob))
 # - termina con head(10)
 
+pob_total_mun |> 
+  filter(prov_cod == "20") |> 
+  arrange(-pob) |> 
+  select(municipio, comarca, prov, pob) |> 
+  head(10)
 
 # -----------------------------------------------------------------------------
 # 6. Crear variables nuevas con mutate()
@@ -143,9 +180,10 @@ pob_total_mun |>
 # Para ello necesitamos dos tablas:
 #   1. población total por municipio
 #   2. población de 65+ por municipio
-
+glimpse(poblacion)
 pob_65_mas <- poblacion |>
-  filter(genero == "Total", edad_etiqueta == ">= 65") |>
+  filter(genero == "Total", 
+         edad_etiqueta == ">= 65") |>
   select(municipio_cod_full, pob_65_mas = pob)
 
 pob_total_mun <- pob_total_mun |>
