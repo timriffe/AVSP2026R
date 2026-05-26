@@ -44,6 +44,7 @@ poblacion <- read_csv("data/clean/pobmun.csv")
 glimpse(poblacion)
 
 # View() abre una pestaña para mirar la tabla completa en RStudio.
+# No es un ahoja de calculo!
 View(poblacion)
 
 # También podemos mirar solo las primeras filas.
@@ -294,7 +295,20 @@ poblacion |>
   ggplot(aes(x= `0`,y=`65`)) +
   geom_point()
 
-
+# hay una relación entre el tamaño de municipio y la razon de 
+#  sexo en edades mayores?
+poblacion |> 
+  filter(!is.na(edad),
+         genero != "Total") |> 
+  group_by(municipio) |> 
+  summarize(tot = sum(pob),
+            rs_65_mas = pob[genero == "Hombres" & edad == 65] /
+              pob[genero == "Mujeres" & edad == 65]) |> 
+  ggplot(aes(x = tot, y = rs_65_mas)) +
+  geom_point() +
+  scale_x_log10() +
+  scale_y_log10() +
+  geom_smooth(method = "gam")
 
 # Resumen de functions:
 # read_csv() 
