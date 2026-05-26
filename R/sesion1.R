@@ -35,7 +35,7 @@ library(janitor)
 # el fichero original
 
 poblacion <- read_csv("data/clean/pobmun.csv")
-# (explica asignacion, referencias)
+
 # -----------------------------------------------------------------------------
 # 2. Mirar los datos
 # -----------------------------------------------------------------------------
@@ -208,6 +208,9 @@ pob_total_mun |>
 # - suma pob y pob_65_mas
 # - crea pct_65_mas dentro de summarise() o con mutate() después
 
+# EJERCICIO 9 --------------------------------------------------------------
+# Calcular la poblacion total de las provinvias desde el fichero inicial
+# poblacion
 
 # -----------------------------------------------------------------------------
 # 8. Primeros gráficos con ggplot2
@@ -260,7 +263,7 @@ pob_total_mun |>
     y = "%"
   )
 
-# EJERCICIO 9 ---------------------------------------------------------------
+# EJERCICIO 10 ---------------------------------------------------------------
 # Haz un gráfico de barras con las 10 comarcas con mayor porcentaje de 65+.
 #
 # Pistas:
@@ -270,14 +273,27 @@ pob_total_mun |>
 # - usa slice_head(n = 10)
 # - usa ggplot() + geom_col() + coord_flip()
 
-# EJERCICIO 10 --------------------------------------------------------------
-# Calcular la poblacion total de las provinvias desde el fichero inicial
-# poblacion
+# Hacemos un scatterplot de pct poblacion < 20 contra poblacion >= 65
+
 #
 # Pistas:
 # - hay que eliminar algunas files antes?
 # - hay que declarar grupos
 # - y despues que hacemos? mutate() o summarize()?
+poblacion |> 
+  filter(!is.na(edad),
+         genero == "Total") |> 
+  select(municipio, edad, pob) |> 
+  group_by(municipio) |> 
+  mutate(pob_pct = 100 * pob / sum(pob)) |>
+  ungroup() |> 
+  filter(edad != 20) |> 
+  select(-pob) |> 
+  # nuevo!
+  pivot_wider(names_from = edad, values_from = pob_pct) |> 
+  ggplot(aes(x= `0`,y=`65`)) +
+  geom_point()
+
 
 
 # Resumen de functions:
