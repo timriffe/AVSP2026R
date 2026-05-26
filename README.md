@@ -1,6 +1,7 @@
 Materiales para el curso de la asociación Vasca de Sociologia y Cienca Politica (AVSP)[https://avsp.eus/]
 Iremos sumando materiales aqui a lo largo del curso.
 
+```
 Contenidos
 R/
   sesion1.R
@@ -15,4 +16,4 @@ datos/
     lookup_municipios_comarcas.csv
     lookup_provincias.csv
     pobmun.csv
-  
+```
