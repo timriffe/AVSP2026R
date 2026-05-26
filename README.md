@@ -1,5 +1,5 @@
-Materiales para el curso de la asociación Vasca de Sociologia y Cienca Politica (AVSP)[https://avsp.eus/]
-Iremos sumando materiales aqui a lo largo del curso.
+Materiales para el curso de la Asociación Vasca de Sociologia y Cienca Politica [AVSP](https://avsp.eus/) 26 - 28 Mayo 2026
+Iremos sumando materiales aquí a lo largo del curso.
 
 ```
 Contenidos
