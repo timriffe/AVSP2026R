@@ -1,0 +1,253 @@
+prov_cod,prov,comarca_cod,comarca_cod_full,comarca,comarca_es,comarca_eu,municipio_cod,municipio_cod_full,municipio,municipio_norm
+01,Araba/Álava,01,0101,Añana,Añana,Añana,006,01006,Armiñón,Armiñón
+01,Araba/Álava,01,0101,Añana,Añana,Añana,049,01049,Añana,Añana
+01,Araba/Álava,01,0101,Añana,Añana,Añana,014,01014,Berantevilla,Berantevilla
+01,Araba/Álava,01,0101,Añana,Añana,Añana,046,01046,Erriberagoitia/Ribera Alta,Erriberagoitia / Ribera Alta
+01,Araba/Álava,01,0101,Añana,Añana,Añana,020,01020,Kuartango,Kuartango
+01,Araba/Álava,01,0101,Añana,Añana,Añana,902,01902,Lantarón,Lantarón
+01,Araba/Álava,01,0101,Añana,Añana,Añana,047,01047,Ribera Baja/Erriberabeitia,Ribera Baja / Erriberabeitia
+01,Araba/Álava,01,0101,Añana,Añana,Añana,055,01055,Valdegovía/Gaubea,Valdegovía / Gaubea
+01,Araba/Álava,01,0101,Añana,Añana,Añana,062,01062,Zambrana,Zambrana
+01,Araba/Álava,02,0102,Arabako Lautada / Llanada Alavesa,Arabako Lautada / Llanada Alavesa,Arabako Lautada,051,01051,Agurain/Salvatierra,Agurain / Salvatierra
+01,Araba/Álava,02,0102,Arabako Lautada / Llanada Alavesa,Arabako Lautada / Llanada Alavesa,Arabako Lautada,001,01001,Alegría-Dulantzi,Alegría-Dulantzi
+01,Araba/Álava,02,0102,Arabako Lautada / Llanada Alavesa,Arabako Lautada / Llanada Alavesa,Arabako Lautada,008,01008,Arratzua-Ubarrundia,Arratzua-Ubarrundia
+01,Araba/Álava,02,0102,Arabako Lautada / Llanada Alavesa,Arabako Lautada / Llanada Alavesa,Arabako Lautada,009,01009,Asparrena,Asparrena
+01,Araba/Álava,02,0102,Arabako Lautada / Llanada Alavesa,Arabako Lautada / Llanada Alavesa,Arabako Lautada,013,01013,Barrundia,Barrundia
+01,Araba/Álava,02,0102,Arabako Lautada / Llanada Alavesa,Arabako Lautada / Llanada Alavesa,Arabako Lautada,021,01021,Elburgo/Burgelu,Elburgo / Burgelu
+01,Araba/Álava,02,0102,Arabako Lautada / Llanada Alavesa,Arabako Lautada / Llanada Alavesa,Arabako Lautada,027,01027,Iruraiz-Gauna,Iruraiz-Gauna
+01,Araba/Álava,02,0102,Arabako Lautada / Llanada Alavesa,Arabako Lautada / Llanada Alavesa,Arabako Lautada,901,01901,Iruña Oka/Iruña de Oca,Iruña Oka / Iruña de Oca
+01,Araba/Álava,02,0102,Arabako Lautada / Llanada Alavesa,Arabako Lautada / Llanada Alavesa,Arabako Lautada,053,01053,San Millán/Donemiliaga,San Millán / Donemiliaga
+01,Araba/Álava,02,0102,Arabako Lautada / Llanada Alavesa,Arabako Lautada / Llanada Alavesa,Arabako Lautada,059,01059,Vitoria-Gasteiz,Vitoria-Gasteiz
+01,Araba/Álava,02,0102,Arabako Lautada / Llanada Alavesa,Arabako Lautada / Llanada Alavesa,Arabako Lautada,061,01061,Zalduondo,Zalduondo
+01,Araba/Álava,03,0103,Arabako Mendialdea / Montaña Alavesa,Arabako Mendialdea / Montaña Alavesa,Arabako Mendialdea,037,01037,Arraia-Maeztu,Arraia-Maeztu
+01,Araba/Álava,03,0103,Arabako Mendialdea / Montaña Alavesa,Arabako Mendialdea / Montaña Alavesa,Arabako Mendialdea,016,01016,Bernedo,Bernedo
+01,Araba/Álava,03,0103,Arabako Mendialdea / Montaña Alavesa,Arabako Mendialdea / Montaña Alavesa,Arabako Mendialdea,017,01017,Campezo/Kanpezu,Campezo / Kanpezu
+01,Araba/Álava,03,0103,Arabako Mendialdea / Montaña Alavesa,Arabako Mendialdea / Montaña Alavesa,Arabako Mendialdea,056,01056,Harana/Valle de Arana,Harana / Valle de Arana
+01,Araba/Álava,03,0103,Arabako Mendialdea / Montaña Alavesa,Arabako Mendialdea / Montaña Alavesa,Arabako Mendialdea,030,01030,Lagrán,Lagrán
+01,Araba/Álava,03,0103,Arabako Mendialdea / Montaña Alavesa,Arabako Mendialdea / Montaña Alavesa,Arabako Mendialdea,044,01044,Peñacerrada-Urizaharra,Peñacerrada-Urizaharra
+01,Araba/Álava,04,0104,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa,011,01011,Baños de Ebro/Mañueta,Baños de Ebro / Mañueta
+01,Araba/Álava,04,0104,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa,022,01022,Elciego,Elciego
+01,Araba/Álava,04,0104,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa,023,01023,Elvillar/Bilar,Elvillar / Bilar
+01,Araba/Álava,04,0104,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa,019,01019,Kripan,Kripan
+01,Araba/Álava,04,0104,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa,028,01028,Labastida/Bastida,Labastida / Bastida
+01,Araba/Álava,04,0104,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa,031,01031,Laguardia,Laguardia
+01,Araba/Álava,04,0104,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa,032,01032,Lanciego/Lantziego,Lanciego / Lantziego
+01,Araba/Álava,04,0104,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa,033,01033,Lapuebla de Labarca,Lapuebla de Labarca
+01,Araba/Álava,04,0104,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa,034,01034,Leza,Leza
+01,Araba/Álava,04,0104,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa,039,01039,Moreda de Álava/Moreda Araba,Moreda de Álava / Moreda Araba
+01,Araba/Álava,04,0104,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa,041,01041,Navaridas,Navaridas
+01,Araba/Álava,04,0104,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa,043,01043,Oyón-Oion,Oyón-Oion
+01,Araba/Álava,04,0104,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa,052,01052,Samaniego,Samaniego
+01,Araba/Álava,04,0104,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa,057,01057,Villabuena de Álava/Eskuernaga,Villabuena de Álava / Eskuernaga
+01,Araba/Álava,04,0104,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa / Rioja Alavesa,Arabako Errioxa,060,01060,Yécora/Iekora,Yécora / Iekora
+01,Araba/Álava,05,0105,Gorbeialdea / Estribaciones del Gorbea,Gorbeialdea / Estribaciones del Gorbea,Gorbeialdea,003,01003,Aramaio,Aramaio
+01,Araba/Álava,05,0105,Gorbeialdea / Estribaciones del Gorbea,Gorbeialdea / Estribaciones del Gorbea,Gorbeialdea,058,01058,Legutio,Legutio
+01,Araba/Álava,05,0105,Gorbeialdea / Estribaciones del Gorbea,Gorbeialdea / Estribaciones del Gorbea,Gorbeialdea,054,01054,Urkabustaiz,Urkabustaiz
+01,Araba/Álava,05,0105,Gorbeialdea / Estribaciones del Gorbea,Gorbeialdea / Estribaciones del Gorbea,Gorbeialdea,018,01018,Zigoitia,Zigoitia
+01,Araba/Álava,05,0105,Gorbeialdea / Estribaciones del Gorbea,Gorbeialdea / Estribaciones del Gorbea,Gorbeialdea,063,01063,Zuia,Zuia
+01,Araba/Álava,06,0106,Arabako Kantaurialdea / Cantábrica Alavesa,Arabako Kantaurialdea / Cantábrica Alavesa,Arabako Kantaurialdea,002,01002,Amurrio,Amurrio
+01,Araba/Álava,06,0106,Arabako Kantaurialdea / Cantábrica Alavesa,Arabako Kantaurialdea / Cantábrica Alavesa,Arabako Kantaurialdea,004,01004,Artziniega,Artziniega
+01,Araba/Álava,06,0106,Arabako Kantaurialdea / Cantábrica Alavesa,Arabako Kantaurialdea / Cantábrica Alavesa,Arabako Kantaurialdea,010,01010,Ayala/Aiara,Ayala / Aiara
+01,Araba/Álava,06,0106,Arabako Kantaurialdea / Cantábrica Alavesa,Arabako Kantaurialdea / Cantábrica Alavesa,Arabako Kantaurialdea,036,01036,Laudio/Llodio,Laudio / Llodio
+01,Araba/Álava,06,0106,Arabako Kantaurialdea / Cantábrica Alavesa,Arabako Kantaurialdea / Cantábrica Alavesa,Arabako Kantaurialdea,042,01042,Okondo,Okondo
+20,Gipuzkoa,01,2001,Bidasoa Beherea / Bajo Bidasoa,Bidasoa Beherea / Bajo Bidasoa,Bidasoa Beherea,036,20036,Hondarribia,Hondarribia
+20,Gipuzkoa,01,2001,Bidasoa Beherea / Bajo Bidasoa,Bidasoa Beherea / Bajo Bidasoa,Bidasoa Beherea,045,20045,Irun,Irun
+20,Gipuzkoa,02,2002,Debabarrena / Bajo Deba,Debabarrena / Bajo Deba,Debabarrena,029,20029,Deba,Deba
+20,Gipuzkoa,02,2002,Debabarrena / Bajo Deba,Debabarrena / Bajo Deba,Debabarrena,030,20030,Eibar,Eibar
+20,Gipuzkoa,02,2002,Debabarrena / Bajo Deba,Debabarrena / Bajo Deba,Debabarrena,032,20032,Elgoibar,Elgoibar
+20,Gipuzkoa,02,2002,Debabarrena / Bajo Deba,Debabarrena / Bajo Deba,Debabarrena,901,20901,Mendaro,Mendaro
+20,Gipuzkoa,02,2002,Debabarrena / Bajo Deba,Debabarrena / Bajo Deba,Debabarrena,056,20056,Mutriku,Mutriku
+20,Gipuzkoa,02,2002,Debabarrena / Bajo Deba,Debabarrena / Bajo Deba,Debabarrena,065,20065,Soraluze-Placencia de las Armas,Soraluze-Placencia de las Armas
+20,Gipuzkoa,03,2003,Debagoiena / Alto Deba,Debagoiena / Alto Deba,Debagoiena,011,20011,Antzuola,Antzuola
+20,Gipuzkoa,03,2003,Debagoiena / Alto Deba,Debagoiena / Alto Deba,Debagoiena,013,20013,Aretxabaleta,Aretxabaleta
+20,Gipuzkoa,03,2003,Debagoiena / Alto Deba,Debagoiena / Alto Deba,Debagoiena,055,20055,Arrasate/Mondragón,Arrasate / Mondragón
+20,Gipuzkoa,03,2003,Debagoiena / Alto Deba,Debagoiena / Alto Deba,Debagoiena,074,20074,Bergara,Bergara
+20,Gipuzkoa,03,2003,Debagoiena / Alto Deba,Debagoiena / Alto Deba,Debagoiena,033,20033,Elgeta,Elgeta
+20,Gipuzkoa,03,2003,Debagoiena / Alto Deba,Debagoiena / Alto Deba,Debagoiena,034,20034,Eskoriatza,Eskoriatza
+20,Gipuzkoa,03,2003,Debagoiena / Alto Deba,Debagoiena / Alto Deba,Debagoiena,068,20068,Leintz-Gatzaga,Leintz-Gatzaga
+20,Gipuzkoa,03,2003,Debagoiena / Alto Deba,Debagoiena / Alto Deba,Debagoiena,059,20059,Oñati,Oñati
+20,Gipuzkoa,04,2004,Donostialdea,Donostialdea,Donostialdea,009,20009,Andoain,Andoain
+20,Gipuzkoa,04,2004,Donostialdea,Donostialdea,Donostialdea,903,20903,Astigarraga,Astigarraga
+20,Gipuzkoa,04,2004,Donostialdea,Donostialdea,Donostialdea,069,20069,Donostia / San Sebastián,Donostia / San Sebastián
+20,Gipuzkoa,04,2004,Donostialdea,Donostialdea,Donostialdea,067,20067,Errenteria,Errenteria
+20,Gipuzkoa,04,2004,Donostialdea,Donostialdea,Donostialdea,040,20040,Hernani,Hernani
+20,Gipuzkoa,04,2004,Donostialdea,Donostialdea,Donostialdea,902,20902,Lasarte-Oria,Lasarte-Oria
+20,Gipuzkoa,04,2004,Donostialdea,Donostialdea,Donostialdea,053,20053,Lezo,Lezo
+20,Gipuzkoa,04,2004,Donostialdea,Donostialdea,Donostialdea,063,20063,Oiartzun,Oiartzun
+20,Gipuzkoa,04,2004,Donostialdea,Donostialdea,Donostialdea,064,20064,Pasaia,Pasaia
+20,Gipuzkoa,04,2004,Donostialdea,Donostialdea,Donostialdea,072,20072,Urnieta,Urnieta
+20,Gipuzkoa,04,2004,Donostialdea,Donostialdea,Donostialdea,073,20073,Usurbil,Usurbil
+20,Gipuzkoa,05,2005,Goierri,Goierri,Goierri,906,20906,Altzaga,Altzaga
+20,Gipuzkoa,05,2005,Goierri,Goierri,Goierri,012,20012,Arama,Arama
+20,Gipuzkoa,05,2005,Goierri,Goierri,Goierri,015,20015,Ataun,Ataun
+20,Gipuzkoa,05,2005,Goierri,Goierri,Goierri,019,20019,Beasain,Beasain
+20,Gipuzkoa,05,2005,Goierri,Goierri,Goierri,035,20035,Ezkio-Itsaso,Ezkio-Itsaso
+20,Gipuzkoa,05,2005,Goierri,Goierri,Goierri,038,20038,Gabiria,Gabiria
+20,Gipuzkoa,05,2005,Goierri,Goierri,Goierri,037,20037,Gaintza,Gaintza
+20,Gipuzkoa,05,2005,Goierri,Goierri,Goierri,043,20043,Idiazabal,Idiazabal
+20,Gipuzkoa,05,2005,Goierri,Goierri,Goierri,047,20047,Itsasondo,Itsasondo
+20,Gipuzkoa,05,2005,Goierri,Goierri,Goierri,049,20049,Lazkao,Lazkao
+20,Gipuzkoa,05,2005,Goierri,Goierri,Goierri,051,20051,Legazpi,Legazpi
+20,Gipuzkoa,05,2005,Goierri,Goierri,Goierri,057,20057,Mutiloa,Mutiloa
+20,Gipuzkoa,05,2005,Goierri,Goierri,Goierri,058,20058,Olaberria,Olaberria
+20,Gipuzkoa,05,2005,Goierri,Goierri,Goierri,076,20076,Ordizia,Ordizia
+20,Gipuzkoa,05,2005,Goierri,Goierri,Goierri,062,20062,Ormaiztegi,Ormaiztegi
+20,Gipuzkoa,05,2005,Goierri,Goierri,Goierri,070,20070,Segura,Segura
+20,Gipuzkoa,05,2005,Goierri,Goierri,Goierri,077,20077,Urretxu,Urretxu
+20,Gipuzkoa,05,2005,Goierri,Goierri,Goierri,078,20078,Zaldibia,Zaldibia
+20,Gipuzkoa,05,2005,Goierri,Goierri,Goierri,025,20025,Zegama,Zegama
+20,Gipuzkoa,05,2005,Goierri,Goierri,Goierri,026,20026,Zerain,Zerain
+20,Gipuzkoa,05,2005,Goierri,Goierri,Goierri,080,20080,Zumarraga,Zumarraga
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,001,20001,Abaltzisketa,Abaltzisketa
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,002,20002,Aduna,Aduna
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,004,20004,Albiztur,Albiztur
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,005,20005,Alegia,Alegia
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,006,20006,Alkiza,Alkiza
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,007,20007,Altzo,Altzo
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,008,20008,Amezketa,Amezketa
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,010,20010,Anoeta,Anoeta
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,014,20014,Asteasu,Asteasu
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,904,20904,Baliarrain,Baliarrain
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,021,20021,Belauntza,Belauntza
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,022,20022,Berastegi,Berastegi
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,023,20023,Berrobi,Berrobi
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,024,20024,Bidania-Goiatz,Bidania-Goiatz
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,031,20031,Elduain,Elduain
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,907,20907,Gaztelu,Gaztelu
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,041,20041,Hernialde,Hernialde
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,042,20042,Ibarra,Ibarra
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,044,20044,Ikaztegieta,Ikaztegieta
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,046,20046,Irura,Irura
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,048,20048,Larraul,Larraul
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,050,20050,Leaburu,Leaburu
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,052,20052,Legorreta,Legorreta
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,054,20054,Lizartza,Lizartza
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,905,20905,Orendain,Orendain
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,060,20060,Orexa,Orexa
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,071,20071,Tolosa,Tolosa
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,075,20075,Villabona,Villabona
+20,Gipuzkoa,06,2006,Tolosaldea,Tolosaldea,Tolosaldea,028,20028,Zizurkil,Zizurkil
+20,Gipuzkoa,07,2007,Urola Kosta,Urola Kosta,Urola Kosta,016,20016,Aia,Aia
+20,Gipuzkoa,07,2007,Urola Kosta,Urola Kosta,Urola Kosta,003,20003,Aizarnazabal,Aizarnazabal
+20,Gipuzkoa,07,2007,Urola Kosta,Urola Kosta,Urola Kosta,017,20017,Azkoitia,Azkoitia
+20,Gipuzkoa,07,2007,Urola Kosta,Urola Kosta,Urola Kosta,018,20018,Azpeitia,Azpeitia
+20,Gipuzkoa,07,2007,Urola Kosta,Urola Kosta,Urola Kosta,020,20020,Beizama,Beizama
+20,Gipuzkoa,07,2007,Urola Kosta,Urola Kosta,Urola Kosta,066,20066,Errezil,Errezil
+20,Gipuzkoa,07,2007,Urola Kosta,Urola Kosta,Urola Kosta,039,20039,Getaria,Getaria
+20,Gipuzkoa,07,2007,Urola Kosta,Urola Kosta,Urola Kosta,061,20061,Orio,Orio
+20,Gipuzkoa,07,2007,Urola Kosta,Urola Kosta,Urola Kosta,079,20079,Zarautz,Zarautz
+20,Gipuzkoa,07,2007,Urola Kosta,Urola Kosta,Urola Kosta,027,20027,Zestoa,Zestoa
+20,Gipuzkoa,07,2007,Urola Kosta,Urola Kosta,Urola Kosta,081,20081,Zumaia,Zumaia
+48,Bizkaia,01,4801,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi,005,48005,Arakaldo,Arakaldo
+48,Bizkaia,01,4801,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi,006,48006,Arantzazu,Arantzazu
+48,Bizkaia,01,4801,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi,093,48093,Areatza,Areatza
+48,Bizkaia,01,4801,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi,009,48009,Arrankudiaga-Zollo,Arrankudiaga-Zollo
+48,Bizkaia,01,4801,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi,023,48023,Artea,Artea
+48,Bizkaia,01,4801,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi,026,48026,Dima,Dima
+48,Bizkaia,01,4801,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi,094,48094,Igorre,Igorre
+48,Bizkaia,01,4801,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi,075,48075,Orozko,Orozko
+48,Bizkaia,01,4801,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi,072,48072,Otxandio,Otxandio
+48,Bizkaia,01,4801,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi,088,48088,Ubide,Ubide
+48,Bizkaia,01,4801,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi,065,48065,Ugao-Miraballes,Ugao-Miraballes
+48,Bizkaia,01,4801,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi,074,48074,Urduña/Orduña,Urduña / Orduña
+48,Bizkaia,01,4801,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi,024,48024,Zeanuri,Zeanuri
+48,Bizkaia,01,4801,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi / Arratia-Nervión,Arratia-Nerbioi,025,48025,Zeberio,Zeberio
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,002,48002,Abanto y Ciérvana-Abanto Zierbena,Abanto y Ciérvana-Abanto Zierbena
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,912,48912,Alonsotegi,Alonsotegi
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,011,48011,Arrigorriaga,Arrigorriaga
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,013,48013,Barakaldo,Barakaldo
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,015,48015,Basauri,Basauri
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,016,48016,Berango,Berango
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,020,48020,Bilbao,Bilbao
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,901,48901,Derio,Derio
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,902,48902,Erandio,Erandio
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,029,48029,Etxebarri,Etxebarri
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,036,48036,Galdakao,Galdakao
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,044,48044,Getxo,Getxo
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,052,48052,Larrabetzu,Larrabetzu
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,054,48054,Leioa,Leioa
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,081,48081,Lezama,Lezama
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,903,48903,Loiu,Loiu
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,071,48071,Muskiz,Muskiz
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,083,48083,Ortuella,Ortuella
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,078,48078,Portugalete,Portugalete
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,082,48082,Santurtzi,Santurtzi
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,084,48084,Sestao,Sestao
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,904,48904,Sondika,Sondika
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,916,48916,Usansolo,Usansolo
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,080,48080,Valle de Trápaga-Trapagaran,Valle de Trápaga-Trapagaran
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,905,48905,Zamudio,Zamudio
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,097,48097,Zaratamo,Zaratamo
+48,Bizkaia,02,4802,Bilbo Handia / Gran Bilbao,Bilbo Handia / Gran Bilbao,Bilbo Handia,913,48913,Zierbena,Zierbena
+48,Bizkaia,03,4803,Durangaldea / Duranguesado,Durangaldea / Duranguesado,Durangaldea,001,48001,Abadiño,Abadiño
+48,Bizkaia,03,4803,Durangaldea / Duranguesado,Durangaldea / Duranguesado,Durangaldea,003,48003,Amorebieta-Etxano,Amorebieta-Etxano
+48,Bizkaia,03,4803,Durangaldea / Duranguesado,Durangaldea / Duranguesado,Durangaldea,091,48091,Atxondo,Atxondo
+48,Bizkaia,03,4803,Durangaldea / Duranguesado,Durangaldea / Duranguesado,Durangaldea,092,48092,Bedia,Bedia
+48,Bizkaia,03,4803,Durangaldea / Duranguesado,Durangaldea / Duranguesado,Durangaldea,019,48019,Berriz,Berriz
+48,Bizkaia,03,4803,Durangaldea / Duranguesado,Durangaldea / Duranguesado,Durangaldea,027,48027,Durango,Durango
+48,Bizkaia,03,4803,Durangaldea / Duranguesado,Durangaldea / Duranguesado,Durangaldea,032,48032,Elorrio,Elorrio
+48,Bizkaia,03,4803,Durangaldea / Duranguesado,Durangaldea / Duranguesado,Durangaldea,034,48034,Ermua,Ermua
+48,Bizkaia,03,4803,Durangaldea / Duranguesado,Durangaldea / Duranguesado,Durangaldea,039,48039,Garai,Garai
+48,Bizkaia,03,4803,Durangaldea / Duranguesado,Durangaldea / Duranguesado,Durangaldea,910,48910,Iurreta,Iurreta
+48,Bizkaia,03,4803,Durangaldea / Duranguesado,Durangaldea / Duranguesado,Durangaldea,050,48050,Izurtza,Izurtza
+48,Bizkaia,03,4803,Durangaldea / Duranguesado,Durangaldea / Duranguesado,Durangaldea,055,48055,Lemoa,Lemoa
+48,Bizkaia,03,4803,Durangaldea / Duranguesado,Durangaldea / Duranguesado,Durangaldea,058,48058,Mallabia,Mallabia
+48,Bizkaia,03,4803,Durangaldea / Duranguesado,Durangaldea / Duranguesado,Durangaldea,059,48059,Mañaria,Mañaria
+48,Bizkaia,03,4803,Durangaldea / Duranguesado,Durangaldea / Duranguesado,Durangaldea,095,48095,Zaldibar,Zaldibar
+48,Bizkaia,04,4804,Enkartazioak / Encartaciones,Enkartazioak / Encartaciones,Enkartazioak,008,48008,Artzentales,Artzentales
+48,Bizkaia,04,4804,Enkartazioak / Encartaciones,Enkartazioak / Encartaciones,Enkartazioak,090,48090,Balmaseda,Balmaseda
+48,Bizkaia,04,4804,Enkartazioak / Encartaciones,Enkartazioak / Encartaciones,Enkartazioak,037,48037,Galdames,Galdames
+48,Bizkaia,04,4804,Enkartazioak / Encartaciones,Enkartazioak / Encartaciones,Enkartazioak,042,48042,Gordexola,Gordexola
+48,Bizkaia,04,4804,Enkartazioak / Encartaciones,Enkartazioak / Encartaciones,Enkartazioak,045,48045,Güeñes,Güeñes
+48,Bizkaia,04,4804,Enkartazioak / Encartaciones,Enkartazioak / Encartaciones,Enkartazioak,022,48022,Karrantza Harana/Valle de Carranza,Karrantza Harana / Valle de Carranza
+48,Bizkaia,04,4804,Enkartazioak / Encartaciones,Enkartazioak / Encartaciones,Enkartazioak,051,48051,Lanestosa,Lanestosa
+48,Bizkaia,04,4804,Enkartazioak / Encartaciones,Enkartazioak / Encartaciones,Enkartazioak,086,48086,Sopuerta,Sopuerta
+48,Bizkaia,04,4804,Enkartazioak / Encartaciones,Enkartazioak / Encartaciones,Enkartazioak,087,48087,Trucios-Turtzioz,Trucios-Turtzioz
+48,Bizkaia,04,4804,Enkartazioak / Encartaciones,Enkartazioak / Encartaciones,Enkartazioak,096,48096,Zalla,Zalla
+48,Bizkaia,05,4805,Gernika-Bermeo,Gernika-Bermeo,Gernika-Bermeo,911,48911,Ajangiz,Ajangiz
+48,Bizkaia,05,4805,Gernika-Bermeo,Gernika-Bermeo,Gernika-Bermeo,914,48914,Arratzu,Arratzu
+48,Bizkaia,05,4805,Gernika-Bermeo,Gernika-Bermeo,Gernika-Bermeo,017,48017,Bermeo,Bermeo
+48,Bizkaia,05,4805,Gernika-Bermeo,Gernika-Bermeo,Gernika-Bermeo,021,48021,Busturia,Busturia
+48,Bizkaia,05,4805,Gernika-Bermeo,Gernika-Bermeo,Gernika-Bermeo,028,48028,Ea,Ea
+48,Bizkaia,05,4805,Gernika-Bermeo,Gernika-Bermeo,Gernika-Bermeo,031,48031,Elantxobe,Elantxobe
+48,Bizkaia,05,4805,Gernika-Bermeo,Gernika-Bermeo,Gernika-Bermeo,033,48033,Ereño,Ereño
+48,Bizkaia,05,4805,Gernika-Bermeo,Gernika-Bermeo,Gernika-Bermeo,079,48079,Errigoiti,Errigoiti
+48,Bizkaia,05,4805,Gernika-Bermeo,Gernika-Bermeo,Gernika-Bermeo,906,48906,Forua,Forua
+48,Bizkaia,05,4805,Gernika-Bermeo,Gernika-Bermeo,Gernika-Bermeo,041,48041,Gautegiz Arteaga,Gautegiz Arteaga
+48,Bizkaia,05,4805,Gernika-Bermeo,Gernika-Bermeo,Gernika-Bermeo,046,48046,Gernika-Lumo,Gernika-Lumo
+48,Bizkaia,05,4805,Gernika-Bermeo,Gernika-Bermeo,Gernika-Bermeo,048,48048,Ibarrangelu,Ibarrangelu
+48,Bizkaia,05,4805,Gernika-Bermeo,Gernika-Bermeo,Gernika-Bermeo,907,48907,Kortezubi,Kortezubi
+48,Bizkaia,05,4805,Gernika-Bermeo,Gernika-Bermeo,Gernika-Bermeo,062,48062,Mendata,Mendata
+48,Bizkaia,05,4805,Gernika-Bermeo,Gernika-Bermeo,Gernika-Bermeo,066,48066,Morga,Morga
+48,Bizkaia,05,4805,Gernika-Bermeo,Gernika-Bermeo,Gernika-Bermeo,068,48068,Mundaka,Mundaka
+48,Bizkaia,05,4805,Gernika-Bermeo,Gernika-Bermeo,Gernika-Bermeo,908,48908,Murueta,Murueta
+48,Bizkaia,05,4805,Gernika-Bermeo,Gernika-Bermeo,Gernika-Bermeo,067,48067,Muxika,Muxika
+48,Bizkaia,05,4805,Gernika-Bermeo,Gernika-Bermeo,Gernika-Bermeo,909,48909,Nabarniz,Nabarniz
+48,Bizkaia,05,4805,Gernika-Bermeo,Gernika-Bermeo,Gernika-Bermeo,076,48076,Sukarrieta,Sukarrieta
+48,Bizkaia,06,4806,Markina-Ondarroa,Markina-Ondarroa,Markina-Ondarroa,004,48004,Amoroto,Amoroto
+48,Bizkaia,06,4806,Markina-Ondarroa,Markina-Ondarroa,Markina-Ondarroa,070,48070,Aulesti,Aulesti
+48,Bizkaia,06,4806,Markina-Ondarroa,Markina-Ondarroa,Markina-Ondarroa,018,48018,Berriatua,Berriatua
+48,Bizkaia,06,4806,Markina-Ondarroa,Markina-Ondarroa,Markina-Ondarroa,030,48030,Etxebarria,Etxebarria
+48,Bizkaia,06,4806,Markina-Ondarroa,Markina-Ondarroa,Markina-Ondarroa,047,48047,Gizaburuaga,Gizaburuaga
+48,Bizkaia,06,4806,Markina-Ondarroa,Markina-Ondarroa,Markina-Ondarroa,049,48049,Ispaster,Ispaster
+48,Bizkaia,06,4806,Markina-Ondarroa,Markina-Ondarroa,Markina-Ondarroa,057,48057,Lekeitio,Lekeitio
+48,Bizkaia,06,4806,Markina-Ondarroa,Markina-Ondarroa,Markina-Ondarroa,060,48060,Markina-Xemein,Markina-Xemein
+48,Bizkaia,06,4806,Markina-Ondarroa,Markina-Ondarroa,Markina-Ondarroa,063,48063,Mendexa,Mendexa
+48,Bizkaia,06,4806,Markina-Ondarroa,Markina-Ondarroa,Markina-Ondarroa,007,48007,Munitibar-Arbatzegi Gerrikaitz,Munitibar-Arbatzegi Gerrikaitz
+48,Bizkaia,06,4806,Markina-Ondarroa,Markina-Ondarroa,Markina-Ondarroa,073,48073,Ondarroa,Ondarroa
+48,Bizkaia,06,4806,Markina-Ondarroa,Markina-Ondarroa,Markina-Ondarroa,915,48915,Ziortza-Bolibar,Ziortza-Bolibar
+48,Bizkaia,07,4807,Plentzia-Mungia,Plentzia-Mungia,Plentzia-Mungia,010,48010,Arrieta,Arrieta
+48,Bizkaia,07,4807,Plentzia-Mungia,Plentzia-Mungia,Plentzia-Mungia,012,48012,Bakio,Bakio
+48,Bizkaia,07,4807,Plentzia-Mungia,Plentzia-Mungia,Plentzia-Mungia,014,48014,Barrika,Barrika
+48,Bizkaia,07,4807,Plentzia-Mungia,Plentzia-Mungia,Plentzia-Mungia,035,48035,Fruiz,Fruiz
+48,Bizkaia,07,4807,Plentzia-Mungia,Plentzia-Mungia,Plentzia-Mungia,038,48038,Gamiz-Fika,Gamiz-Fika
+48,Bizkaia,07,4807,Plentzia-Mungia,Plentzia-Mungia,Plentzia-Mungia,040,48040,Gatika,Gatika
+48,Bizkaia,07,4807,Plentzia-Mungia,Plentzia-Mungia,Plentzia-Mungia,043,48043,Gorliz,Gorliz
+48,Bizkaia,07,4807,Plentzia-Mungia,Plentzia-Mungia,Plentzia-Mungia,053,48053,Laukiz,Laukiz
+48,Bizkaia,07,4807,Plentzia-Mungia,Plentzia-Mungia,Plentzia-Mungia,056,48056,Lemoiz,Lemoiz
+48,Bizkaia,07,4807,Plentzia-Mungia,Plentzia-Mungia,Plentzia-Mungia,061,48061,Maruri-Jatabe,Maruri-Jatabe
+48,Bizkaia,07,4807,Plentzia-Mungia,Plentzia-Mungia,Plentzia-Mungia,064,48064,Meñaka,Meñaka
+48,Bizkaia,07,4807,Plentzia-Mungia,Plentzia-Mungia,Plentzia-Mungia,069,48069,Mungia,Mungia
+48,Bizkaia,07,4807,Plentzia-Mungia,Plentzia-Mungia,Plentzia-Mungia,077,48077,Plentzia,Plentzia
+48,Bizkaia,07,4807,Plentzia-Mungia,Plentzia-Mungia,Plentzia-Mungia,085,48085,Sopela,Sopela
+48,Bizkaia,07,4807,Plentzia-Mungia,Plentzia-Mungia,Plentzia-Mungia,089,48089,Urduliz,Urduliz
