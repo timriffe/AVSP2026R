@@ -241,7 +241,7 @@ pob_total_mun |>
   coord_flip() +
   labs(
     title = "Los 10 municipios más poblados",
-    subtitle = "C.A. de Euskadi, 2025",
+    subtitle = "CAPV, 2025",
     x = NULL,
     y = "Población"
   )
@@ -259,7 +259,7 @@ pob_total_mun |>
   geom_col() +
   labs(
     title = "Porcentaje de población de 65 años o más",
-    subtitle = "Territorios históricos, C.A. de Euskadi, 2025",
+    subtitle = "Territorios históricos, CAPV, 2025",
     x = NULL,
     y = "%"
   )
