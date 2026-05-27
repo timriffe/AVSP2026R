@@ -1,5 +1,5 @@
 # Introducción a R con datos sociales
-# Sesión 2 - Asociación Vasca de Sociología
+# Sesión 2 - Asociación Vasca de Sociología y Ciencia Politica
 
 library(tidyverse)
 library(janitor)
@@ -12,19 +12,23 @@ poblacion <- read_csv("data/clean/pobmun.csv", show_col_types = FALSE)
 
 
 pob_total_mun <- poblacion |>
-  filter(genero == "Total", edad_etiqueta == "Total")
+  filter(genero == "Total", 
+         edad_etiqueta == "Total")
 
 pob_65_mas <- poblacion |>
-  filter(genero == "Total", edad_etiqueta == ">= 65") |>
+  filter(genero == "Total", 
+         edad_etiqueta == ">= 65") |>
   select(municipio_cod_full, pob_65_mas = pob)
 
 pob_total_mun <- pob_total_mun |>
-  left_join(pob_65_mas, by = "municipio_cod_full") |>
+  left_join(pob_65_mas, 
+            by = "municipio_cod_full") |>
   mutate(pct_65_mas = pob_65_mas / pob * 100)
 
 # identico:
 poblacion |> 
-  filter(genero == "Total", edad_etiqueta != "Total") |>
+  filter(genero == "Total", 
+         edad_etiqueta != "Total") |>
   group_by(municipio_cod_full) |> 
   mutate(pob_65_mas = 100 * pob / sum(pob)) |> 
   filter(edad_etiqueta == ">= 65") |> 
@@ -34,7 +38,21 @@ poblacion |>
 # Crea una variable pct_0_19 con el porcentaje de 
 # población de 0-19 años.
 
+poblacion |> 
+  filter(#genero == "Total", 
+         edad_etiqueta != "Total") |>
+  group_by(municipio_cod_full, genero) |> 
+  mutate(pob_0_19 = 100 * pob / sum(pob)) |> 
+  filter(edad_etiqueta == "0-19") |> 
+  select(prov, 
+         comarca, 
+         municipio, genero,pob, pob_0_19) 
 
+
+
+glimpse(poblacion)
+colnames(poblacion)
+View(poblacion)
 # -------------------------------------
 # 2. Recodificar con mutate() + case_when()
 # -------------------------------------
@@ -49,6 +67,10 @@ pob_total_mun <- pob_total_mun |>
     )
   )
 
+pob_total_mun |> 
+  arrange(pob) |> 
+  select(municipio, tamano_mun) |> 
+  View()
 pob_total_mun |>
   count(tamano_mun)
 
@@ -56,6 +78,11 @@ pob_total_mun |>
 # Que ideas teneis para crear una variable para categorizar 
 # la estructura de edad de los municipios en mas o menos
 # envejecido?
+pob_total_mun |> 
+  ggplot(aes(x=pct_65_mas))+
+  geom_density() +
+  geom_vline(xintercept = c(20,25), color = "red")
+
 
 pob_total_mun <- pob_total_mun |>
   mutate(
@@ -66,8 +93,46 @@ pob_total_mun <- pob_total_mun |>
     )
   )
 
-pob_total_mun |>
-  count(envejecimiento_mun)
+# inventa un variable (no serio) sobre el "potencial laboral"
+# definido a partir del peso relativo de la clase media 
+# de edad (20-64).
+pob_potencial <-
+poblacion |> 
+  filter(genero == "Total",
+         edad_etiqueta != "Total") |> 
+  group_by(municipio_cod_full) |> 
+  mutate(pct = 100 * pob / sum(pob)) |> 
+  ungroup() |> 
+  filter(edad_etiqueta == "20-64") |> 
+  # ggplot(aes(x = pct)) +
+  # geom_density()
+  mutate(potencial = case_when(
+    pct < 57 ~ "menor",
+    pct < 62 ~ "intermedio",
+    TRUE ~ "alto"
+  )) 
+
+
+
+pob_potencial |>
+  count(potencial)
+
+# solucion de Aidee
+pob_20_64 <- poblacion |>
+  filter(genero == "Total", 
+         edad_etiqueta == "20-64") |>
+  select(municipio_cod_full, pob_20_64 = pob)
+
+pob_total_mun <- pob_total_mun |>
+  left_join(pob_20_64, 
+            by = "municipio_cod_full") |>
+  mutate(pct_20_64 = pob_20_64 / pob * 100, 
+         potencial_laboral = case_when(
+           pct_20_64 < 57 ~ "menos potencial",
+           pct_20_64 < 60 ~ "intermedio",
+           TRUE ~ "más potencial"
+    )
+  )
 
 # -------------------------------------------------------
 # 3. group_by() + summarise()
@@ -75,7 +140,8 @@ pob_total_mun |>
 # Una tabla municipal se puede resumir a provincias o comarcas
 
 resumen_prov <- poblacion |>
-  filter(edad_etiqueta != "Total") |> 
+  filter(edad_etiqueta != "Total",
+         genero == "Total") |> 
   group_by(prov_cod, prov, edad, edad_etiqueta) |>
   summarise(
     pob = sum(pob),
@@ -84,15 +150,17 @@ resumen_prov <- poblacion |>
   ) |>
   group_by(prov_cod, prov) |> 
   mutate(
-    pob_pct = pob / sum(pob)
+    pob_pct = 100 * pob / sum(pob)
   )
+
 
 resumen_prov
 
 # Se podria hacer lo mismo por comarcas.
 # NOTA: hacer esto porque lo necesitamos luego!
 resumen_comarcas <- poblacion |>
-  filter(edad_etiqueta != "Total") |> 
+  filter(edad_etiqueta != "Total",
+         genero == "Total") |> 
   group_by(comarca, comarca_cod, comarca_cod_full, edad, edad_etiqueta) |>
   summarise(
     pob = sum(pob),
@@ -102,6 +170,8 @@ resumen_comarcas <- poblacion |>
   mutate(
     pob_pct = pob / sum(pob)
   )
+
+# saltar este ejercicio, dar solucion jueves
 # EJERCICIO 3 ------------------------------------------
 # (reto, 5+ min)
 # 1. empezar con poblacion - 
@@ -112,6 +182,10 @@ resumen_comarcas <- poblacion |>
 # x 3 (grupos edad) = 18 filas, y las columnas:
 # tamaño | genero | edad | edad_etiqueta | pob.
 
+
+
+
+# mismo, saltar
 # EJERCICIO 4 -----------------------------------------------
 # ¿Cuáles son las 10 comarcas con mayor porcentaje de población de 65+?
 
@@ -138,7 +212,7 @@ glimpse(pib_prov_raw)
 
 pib_prov <- pib_prov_raw |>
   clean_names()
-
+colnames(pib_prov)
 
 # Ajusta estos nombres si INE cambia la descarga.
 # Normalmente hay una columna de provincias, una de periodo/año y una de valor.
@@ -146,20 +220,27 @@ pib_prov <- pib_prov_raw |>
 pib_prov <- pib_prov |>
   mutate(prov_cod = substr(provincias,1,2)) |> 
   select(prov_cod, pib = total)
-
-resumen_prov_pib <- resumen_prov |>
+# pib_prov |> View()
+resumen_prov <- resumen_prov |>
   group_by(prov, prov_cod) |> 
   summarize(pob = sum(pob),
-            .groups = "drop") |> 
+            .groups = "drop")
+
+resumen_prov_pib <- 
+  resumen_prov |> 
   left_join(pib_prov, by = "prov_cod") |>
-  mutate(pib_per_cap = pib / pob)
+  mutate(pib_per_cap = 1000 * pib / pob)
 
 resumen_prov_pib
 
 # EJERCICIO 5 -------------------------------------
 # Cambia left_join() por right_join(), que cambia?
-# prueba anti_join(), que cambia?
+# prueba anti_join(), que cambia? full_join()
 
+  left_join( 
+            resumen_prov,
+            pib_prov, 
+            by = "prov_cod")
 # la forma es:
 # resumen_prov |>
 #  *_join(pib_prov, by = "prov_cod")
@@ -188,14 +269,15 @@ comarca_tipo <- resumen_comarcas |>
 comarca_tipo |>
   count(tipo_comarca)
 
-resumen_comarca_tipo <- resumen_comarcas |>
+poblacion_comarca_tipo <- poblacion |>
   left_join(
-    comarca_tipo |> select(comarca_cod_full, tipo_comarca),
+    comarca_tipo |> 
+      select(comarca_cod_full, tipo_comarca),
     by = "comarca_cod_full"
   )
 
 # porque es diferente?
-resumen_comarca_tipo |>
+poblacion_comarca_tipo |>
   count(tipo_comarca)
 
 # -------------------------------------------------
@@ -210,8 +292,10 @@ edad_pct_mun <- poblacion |>
   group_by(municipio_cod_full, municipio) |>
   mutate(pct = pob / sum(pob) * 100) |>
   ungroup() |>
-  select(municipio_cod_full, municipio, edad, pct) |>
-  pivot_wider(names_from = edad, values_from = pct)
+  select(municipio_cod_full, municipio, edad_etiqueta, pct) |>
+  pivot_wider(names_from = edad_etiqueta, values_from = pct) #|> 
+  #pivot_longer(3:5, names_to ="edad_etiqueta",
+  #             values_to = "pct")
 
 edad_pct_mun |>
   head()
@@ -219,20 +303,33 @@ edad_pct_mun |>
 # EJERCICIO 6 --------------------------------------
 # Hemos olvidado anadir las columnas prov y comarca 
 # a edad_pct_mun. Puedes anadir estas columnas (solo)?
-# tips: utilia pob_total_mun, elige solo las columnas 
+# tips: utiliza pob_total_mun, elige solo las columnas 
 # que necesitamos, y hacer algun tipo de join.
+tabla_correspondencia <-
+pob_total_mun |> 
+  select(municipio_cod_full,
+         prov_cod,
+         prov,
+         comarca_cod,
+         comarca_cod_full,
+         comarca)
 
 # pivot_longer() hace el camino contrario.
 
-edad_pct_largo <- edad_pct_mun |>
+edad_pct_mun <- edad_pct_mun |>
   pivot_longer(
-    cols = c(`0`, `20`, `65`),
+    cols = 3:5,
     names_to = "edad",
     values_to = "pct"
-  )
+  ) |> 
+  left_join(tabla_correspondencia, by = "municipio_cod_full")
+
+# hemos llegado hasta aqui
 
 edad_pct_largo |>
   head()
+
+
 
 # EJERCICIO 8 -----------------------------------------
 # Filtra edad_pct_largo para edad == "65" y ordena por pct descendente.
