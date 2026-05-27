@@ -190,6 +190,7 @@ pob_total_mun <- pob_total_mun |>
   # unir datos!
   left_join(pob_65_mas, by = "municipio_cod_full") |>
   mutate(pct_65_mas = pob_65_mas / pob * 100)
+# Hemos llegado hasta aqui
 
 pob_total_mun |>
   select(prov, comarca, municipio, pob, pob_65_mas, pct_65_mas) |>
