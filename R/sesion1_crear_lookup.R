@@ -1,4 +1,4 @@
-# Inputs esperados:
+# Inputs:
 #   data/raw/MunicipiosCAE_2025_19_02.xlsx
 #   data/raw/Comarcas_de_la_C.A._de_Euskadi.xlsx
 #
