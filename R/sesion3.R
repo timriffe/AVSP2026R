@@ -5,7 +5,7 @@
 library(tidyverse)
 library(janitor)
 library(scales)
-library(colorspace)
+library(colorspace)# install.packages("colorspace")
 
 # -----------------------------------------------
 # 1. Datos limpios
@@ -19,12 +19,14 @@ denom <- read_csv("data/clean/denominadores_fecundidad.csv",
 glimpse(nacimientos)
 glimpse(denom)
 
+denom |> pull(periodo) |> range()
+
 # Nacimientos: provincia x edad de la madre x año
 # Denominadores: provincia x edad x año x población femenina
 
 
 # En nacimientos, edad viene como texto. Hay también filas "Total".
-nacimientos
+
 nac_edad <- nacimientos |>
   filter(edad != "Total") |>
   mutate(edad = parse_number(edad)) |>
@@ -36,15 +38,14 @@ denom_edad <- denom |>
 # EJERCICIO 1 ---------------------------------------------------------------
 # Mira los años disponibles en nac_edad y denom_edad.
 # Pistas: distinct(periodo), arrange(periodo), range(periodo)
-
+nac_edad |> pull(edad) |> range()
 nac_edad |> pull(periodo) |> range()
-denom_edad |> pull(periodo) |> range()
+denom_edad |> pull(edad) |> range()
 nac_edad |> 
   filter(edad == 20,periodo==2000,prov_cod=="01")
 # -------------------------------------------------------
 # 2. Calcular tasas por edad: ASFR
 # -------------------------------------------------------
-
 fec_edad <- nac_edad |>
   left_join(
     denom_edad,
@@ -68,7 +69,10 @@ fec_edad |>
 
 # EJERCICIO 2 ------------------------------------------
 # ¿Cuál fue la tasa por 1.000 mujeres a los 30 años en Bizkaia en 2024?
-
+fec_edad |> 
+  filter(edad == 30,
+         periodo == 2024,
+         prov_cod == "48")
 # ------------------------------------------------------
 # 3. ISF y edad media a la maternidad
 # ------------------------------------------------------
@@ -120,20 +124,29 @@ isf_todo <- bind_rows(isf_prov, isf_euskadi)
 # Pistas: group_by(prov), slice_max(isf, n = 1)
 # o sino group_by(prov) con filter(isf == max(isf))
 
+isf_prov |> 
+  group_by(prov) |> 
+  filter(isf == max(isf))
+
 # -------------------------------------------
 # 4. Primer ggplot: líneas
 # -------------------------------------------
 
+# para ver que paletas hay en colorspace
+# hcl_palettes(plot = TRUE)
+
 isf_prov |>
   ggplot(aes(x = periodo, y = isf, color = prov)) +
+  geom_point() + 
   geom_line(linewidth = 1) +
+  scale_color_discrete_qualitative(palette = "Warm") +
   labs(
-    title = "Índice sintético de fecundidad",
-    subtitle = "Territorios históricos de la C.A. de Euskadi",
-    x = NULL,
-    y = "Hijos/as por mujer",
-    color = "Territorio"
-  )
+   title = "Índice sintético de fecundidad",
+   subtitle = "Territorios históricos de la C.A. de Euskadi",
+   x = NULL,
+   y = "Hijos/as por mujer",
+   color = "Territorio"
+   )
 
 # La estructura básica:
 # ggplot(datos, aes(...)) + geom_algo() + labs(...)
@@ -141,19 +154,24 @@ isf_prov |>
 # EJERCICIO 4 -----------------------------------------------
 # Haz el mismo gráfico, pero usando la edad media a la maternidad (emm).
 
+isf_prov |> 
+  ggplot(aes(x=periodo,y=emm,color=prov)) +
+  geom_line()
+
+
 # -----------------------------------------------------------
 # 5. Capas: líneas provinciales + línea destacada de Euskadi
 # -----------------------------------------------------------
 ggplot(mapping = aes(x = periodo, y = isf)) +
   geom_line(
     data = isf_prov,
-    aes(color = prov),
-    linewidth = 0.9,
-    alpha = 0.8
+    aes(group = prov),
+    linewidth = 0.5,
+    alpha = 0.5
   ) +
   geom_line(
     data = isf_euskadi,
-    color = "black",
+    color = "red",
     linewidth = 1.4
   ) +
   labs(
@@ -167,6 +185,17 @@ ggplot(mapping = aes(x = periodo, y = isf)) +
 # Idea clave:
 # - aes(color = prov) mapea una variable a un color.
 # - color = "black" fija un color manualmente.
+
+# Ejercicio:
+# hacer un scatterplot de emm vs isf para euskadi
+
+isf_euskadi |> 
+  ggplot(aes(x = emm,
+             y = isf,
+             color = periodo)) +
+  geom_point(size = 1.2) +
+  geom_line() +
+  theme_minimal()
 
 # ----------------------------------------------------------
 # 6. Escalas y etiquetas
@@ -200,7 +229,8 @@ ggplot() +
     caption = "Fuente: elaboración propia a partir de Eustat/INE."
   ) +
   theme_minimal()
-
+# install.packages("remotes")
+#remotes::install_github("MatthewBJane/ThemePark")
 # EJERCICIO 5 -------------------------------------------------
 # Cambia el tema: prueba theme_classic(), theme_bw() o theme_light().
 # ¿Cuál se lee mejor en una diapositiva?
@@ -214,7 +244,7 @@ fec_euskadi |>
   geom_tile() +
   coord_equal() +
   scale_fill_continuous_sequential(
-    palette = "YlOrRd",
+    palette = "SunsetDark",
     name = "Tasa por\n1.000 mujeres"
   ) +
   labs(
@@ -233,6 +263,34 @@ fec_euskadi |>
 # Haz la misma superficie para Bizkaia.
 # Pista: empieza con fec_edad |> filter(prov == "Bizkaia")
 
+fec_edad |> 
+  filter(prov_cod == "48") |> 
+  ggplot(aes(x = periodo,
+             y = edad,
+             fill = asfr)) +
+  geom_tile() +
+  coord_equal() +
+  scale_fill_continuous_sequential("Sunset")
+
+# Reto:
+# Hacer un grafico para una de nuestras 4 poblaciones
+# donede se dibujan las tasas por edad (edad en x) como
+# lineas, y cada año tiene linea propia, y el color de las
+# lineas viene del año
+
+fec_edad |> 
+  filter(prov_cod == "20") |> 
+  ggplot(aes(x = edad,
+             y = asfr,
+             color = periodo,
+             group = periodo)) +
+  geom_line() +
+  scale_color_continuous_sequential() +
+  theme_minimal() #+
+  #geom_vline(xintercept = c(31,37))
+
+
+
 # ---------------------------------------------------------------
 # 8. Añadir una capa: edad media sobre la superficie
 # ---------------------------------------------------------------
@@ -244,8 +302,8 @@ fec_euskadi |>
     data = isf_euskadi,
     aes(x = periodo, y = emm),
     inherit.aes = FALSE,
-    color = "black",
-    linewidth = 1.2
+    color = "#c7e8eb",
+    linewidth = .5
   ) +
   scale_fill_continuous_sequential(
     palette = "YlOrRd",
@@ -272,7 +330,7 @@ fec_edad |>
   ggplot(aes(x = periodo, y = edad, fill = asfr_1000)) +
   geom_tile() +
   coord_equal() +
-  facet_wrap(~ prov) +
+  facet_wrap(~ prov, ncol = 1) +
   scale_fill_continuous_sequential(
     palette = "YlOrRd",
     name = "Tasa por\n1.000 mujeres"
@@ -371,6 +429,8 @@ grafico_isf <- ggplot() +
   theme_minimal()
 
 grafico_isf
+
+?mutate
 
 # no usamos jpeg para graficos estadisticos casi nunca
 ggsave(
