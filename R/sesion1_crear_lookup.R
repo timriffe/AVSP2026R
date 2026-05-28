@@ -1,7 +1,3 @@
-
-# Creamos una tabla de correspondencias entre municipios, comarcas y territorios
-# históricos de la C.A. de Euskadi usando dos ficheros de clasificación de Eustat.
-#
 # Inputs esperados:
 #   data/raw/MunicipiosCAE_2025_19_02.xlsx
 #   data/raw/Comarcas_de_la_C.A._de_Euskadi.xlsx
@@ -14,9 +10,9 @@
 library(tidyverse)
 library(readxl)
 
-# -----------------------------------------------------------------------------
-# 0. Rutas
-# -----------------------------------------------------------------------------
+# ----------------------------------------
+# 0. urls, paths
+# -----------------------------------------
 # https://es.eustat.eus/estadisticas/opt_7/id_22070/clasificaciones.html
 path_municipios <- "data/raw/MunicipiosCAE_2025_19_02.xlsx"
 # https://es.eustat.eus/estadisticas/opt_7/id_22063/clasificaciones.html
@@ -25,9 +21,9 @@ path_comarcas   <- "data/raw/Comarcas_de_la_C.A._de_Euskadi.xlsx"
 out_dir <- "data/clean"
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 
-# -----------------------------------------------------------------------------
+# ------------------------------------------
 # 1. Pequeñas funciones auxiliares
-# -----------------------------------------------------------------------------
+# -------------------------------------------
 
 clean_chr <- function(x) {
   x |>
@@ -44,18 +40,18 @@ normalizar_nombre <- function(x) {
     str_replace_all("\\s+", " ")
 }
 
-# -----------------------------------------------------------------------------
+# ---------------------------------------------
 # 2. Territorios históricos / provincias
-# -----------------------------------------------------------------------------
+# ---------------------------------------------
 
 lookup_provincias <- tibble(
   prov_cod = c("01", "20", "48"),
   prov = c("Araba/Álava", "Gipuzkoa", "Bizkaia")
 )
 
-# -----------------------------------------------------------------------------
+# ---------------------------------------------
 # 3. Comarcas
-# -----------------------------------------------------------------------------
+# ---------------------------------------------
 
 lookup_comarcas <- read_excel(path_comarcas, sheet = 1, col_types = "text") |>
   transmute(
@@ -78,9 +74,9 @@ lookup_comarcas <- read_excel(path_comarcas, sheet = 1, col_types = "text") |>
   ) |>
   arrange(prov_cod, comarca_cod)
 
-# -----------------------------------------------------------------------------
+# ------------------------------------
 # 4. Municipios
-# -----------------------------------------------------------------------------
+# ------------------------------------
 #
 # Este fichero tiene varias filas de título antes de la tabla. Leemos sin nombres
 # de columnas, detectamos las filas reales por el patrón de códigos, y luego
@@ -131,9 +127,9 @@ lookup_municipios <- raw_municipios |>
   arrange(prov_cod, comarca_cod, municipio)
 
 View(lookup_municipios)
-# -----------------------------------------------------------------------------
+# --------------------------
 # 5. Escribir outputs
-# -----------------------------------------------------------------------------
+# --------------------------
 
 write_csv(
   lookup_provincias,

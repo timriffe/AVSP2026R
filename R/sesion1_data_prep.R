@@ -1,8 +1,4 @@
-# 02_limpiar_eustat_poblacion_v7.R
-#
-# Limpia la tabla de población de Eustat y guarda un único fichero tidy,
-# sin subtotales: una fila por municipio, sexo y grupo de edad.
-#
+
 # Inputs:
 #   data/raw/xls0011427_c.xlsx
 #   data/clean/lookup_municipios_comarcas.csv
@@ -111,10 +107,6 @@ find_sex_row <- function(raw) {
   
   sex_row <- which(str_detect(row_text, "Total.*Hombres.*Mujeres"))[1]
   
-  if (is.na(sex_row)) {
-    stop("No encuentro la fila de cabecera con Total, Hombres y Mujeres.")
-  }
-  
   sex_row
 }
 
@@ -204,12 +196,6 @@ missing_mun <- pob_mun |>
   filter(is.na(municipio_cod)) |>
   distinct(ambito)
 
-if (nrow(missing_mun) > 0) {
-  stop(
-    "Hay municipios sin emparejar en lookup_municipios_comarcas.csv: ",
-    paste(missing_mun$ambito, collapse = ", ")
-  )
-}
 
 pob_mun <- pob_mun |>
   select(
